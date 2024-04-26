@@ -29,12 +29,12 @@ See: https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md
 copy the following into emonhub.conf:
 
 [[27]]
-  nodename = EmonTx4_DB
+  nodename = EmonTx5
   [[[rx]]]
-    names = MSG, V1, V2, V3, P1, P2, P3, P4, P5, P6, E1, E2, E3, E4, E5, E6, pulse
-    datacodes = L, h,h,h, h,h,h,h,h,h, l,l,l,l,l,l ,L
-    scales = 1,0.01,0.01,0.01,1,1,1,1,1,1,1,1,1,1,1
-    units = n,V,V,V,W,W,W,W,W,W,Wh,Wh,Wh,Wh,Wh,Wh,p
+    names = MSG, V1, P1, P2, P3, P4, P5, P6, E1, E2, E3, E4, E5, E6, pulse
+    datacodes = L, h, h,h,h,h,h,h, l,l,l,l,l,l ,L
+    scales = 1,0.01,1,1,1,1,1,1,1,1,1,1,1
+    units = n,V,W,W,W,W,W,W,Wh,Wh,Wh,Wh,Wh,Wh,p
 
 */
 // Comment/Uncomment as applicable
