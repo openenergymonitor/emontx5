@@ -10,7 +10,8 @@
 
 
 Change Log:
-v1.0.0: First release of emonTx5_DB_6CT_1phase
+v1.0.0: Based on emonPi2_DB_6CT_1phase
+v1.1.0: First release of emonTx5_DB_6CT_1phase
 
 */
 #define Serial Serial3
@@ -21,7 +22,7 @@ v1.0.0: First release of emonTx5_DB_6CT_1phase
 
 #define RadioFormat RFM69_LOW_POWER_LABS
 
-const char *firmware_version = {"1.0.0\n\r"};
+const char *firmware_version = {"1.1.0\n\r"};
 /*
 
 emonhub.conf node decoder (nodeid is 27 when switch is off, 18 when switch is on)
