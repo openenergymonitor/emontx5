@@ -1,6 +1,6 @@
 /*
 
-Firmware: emonTx5_DB_12CT_rf (Based on emonLibDB example EmonTx4DB_rf)
+Firmware: emonTx5_DB_12CT (Based on emonLibDB example EmonTx4DB)
 
 Due to the limits imposed by the data format required by the radio module, it is necessary to split the data into
 two packets sent consecutively. Each packet is sent from a different NodeID, but both relate to the same datalog period
@@ -86,7 +86,7 @@ void setup()
   Serial.end();
   Serial.begin(115200);
   
-  Serial.print(F("emonTx5_DB_12CT_rf V")); Serial.write(firmware_version);
+  Serial.print(F("emonTx5_DB_12CT V")); Serial.write(firmware_version);
   Serial.println(F("OpenEnergyMonitor.org"));
 
   /****************************************************************************
