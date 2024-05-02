@@ -10,7 +10,8 @@
 
 
 Change Log:
-v1.0.0: First release of emonTx5_CM_6CT_temperature
+v1.5.7: Based on emonPi2_CM_6CT_temperature
+v1.6.0: First release of emonTx5_CM_6CT_temperature
 
 EmonPi2 variant: identical to EmonTx4 emonLibCM firmware appart from different radio and pulse pin map 
 
@@ -23,7 +24,7 @@ EmonPi2 variant: identical to EmonTx4 emonLibCM firmware appart from different r
 
 #define RadioFormat RFM69_LOW_POWER_LABS
 
-const char *firmware_version = {"1.0.0\n\r"};
+const char *firmware_version = {"1.6.0\n\r"};
 /*
 
 emonhub.conf node decoder (nodeid is 17 when switch is off, 18 when switch is on)
