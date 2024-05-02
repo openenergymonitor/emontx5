@@ -1,5 +1,5 @@
 /*
-  emonTx5 DB 6CT Single phase
+  emonTx5_DB_6CT_1phase
   using EmonLibCM https://github.com/openenergymonitor/EmonLibCM
   Authors: Robert Wall, Trystan Lea, Robin Emley
   
@@ -10,7 +10,7 @@
 
 
 Change Log:
-v1.0.0: First release of EmonTx5 6CT emonDB 1-phase firmware
+v1.0.0: First release of emonTx5_DB_6CT_1phase
 
 */
 #define Serial Serial3
@@ -120,7 +120,7 @@ bool  USA=false;
 bool calibration_enable = true;                           // Enable on-line calibration when running. 
                                                            // For safety, thus MUST default to false. (Required due to faulty ESP8266 software.)
 
-//----------------------------emonPi2 hard-wired connections-----------------------------------
+//----------------------------emonTx5 hard-wired connections-----------------------------------
 const byte LEDpin      = PIN_PC2;  // emonPi2 LED
 //----------------------------------------Setup--------------------------------------------------
 void setup() 

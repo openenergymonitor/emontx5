@@ -1,7 +1,7 @@
 /*
   emonTx5_DB_6CT_3phase
   using EmonLibCM https://github.com/openenergymonitor/EmonLibCM
-  Authors: Robin Emley, Robert Wall, Trystan Lea
+  Authors: Robert Wall, Trystan Lea, Robin Emley
   
   -----------------------------------------
   Part of the openenergymonitor.org project
@@ -73,6 +73,7 @@ RFM69 rf;
 
 #define NUM_V_CHANNELS 3                                   // SET TO 1 FOR SINGLE PHASE
 #define NUM_I_CHANNELS 6
+#define PULSE_PIN 3                                        // Default to pulse on analog (this would ideally be an EEPROM setting but we want to avoid requiring re-configuration for now).
 
 // 50 Bytes
 typedef struct {
@@ -278,15 +279,36 @@ void setup()
   * The 'Analogue' input is not available if an extender card is fitted.      *
   ****************************************************************************/
  
-  EmonLibDB_setPulseEnable(true);              // Enable counting on "Pulse" input
-  EmonLibDB_setPulseMinPeriod(20);             // Contact bounce must not last longer than 20 ms
+  // EmonLibDB_setPulseEnable(false);                            // Disable counting on "Pulse" input 
+  // EmonLibDB_setPulseMinPeriod(20, FALLING);                   // Contact bounce must not last longer than 20 ms
 
-  EmonLibDB_setPulseEnable(2, false);           // Enable counting on "Digital" input
-  // EmonLibDB_setPulseMinPeriod(2, 20, FALLING); // Contact bounce must not last longer than 20 ms, trigger on the falling edge
+  // EmonLibDB_setPulseEnable(2, false);                         // Disable counting on "Digital" input
+  // EmonLibDB_setPulseMinPeriod(2, 20, FALLING);                // Contact bounce must not last longer than 20 ms, trigger on the falling edge
 
-  EmonLibDB_setPulseEnable(3, false);          // Disable counting on "Analog" input
-  // EmonLibDB_setPulseMinPeriod(3, 0, RISING);   // No contact bounce expected, trigger on the rising edge
-  // EmonLibDB_setPulseCount(3, 123);             // Initialise the pulse count for this to 123 counts
+  if (PULSE_PIN==1) {
+    Serial.print(F("Pulse: ")); 
+  } else if (PULSE_PIN==2) {
+    Serial.print(F("Pulse on digital: ")); 
+  } else if (PULSE_PIN==3) {
+    Serial.print(F("Pulse on analog: ")); 
+  }
+
+  if (EEProm.pulse_enable) {
+    Serial.print(F("enabled"));
+
+    Serial.print(F(", min period: "));
+    Serial.print(EEProm.pulse_period);
+    Serial.println(F("ms"));
+  } else {
+    Serial.println(F("disabled"));
+  }
+  
+
+
+  // Using pulse on analog as default
+  EmonLibDB_setPulseEnable(PULSE_PIN, EEProm.pulse_enable);              // Enable counting on "Analog" input
+  EmonLibDB_setPulseMinPeriod(PULSE_PIN, EEProm.pulse_period, FALLING);  // Min period from EEProm, trigger on the falling edge
+  
 
   /****************************************************************************
   *                                                                           *
@@ -354,7 +376,7 @@ void loop()
         emonpi.E[ch] = EmonLibDB_getWattHour(ch+1);
     }
     
-    emonpi.pulse = EmonLibDB_getPulseCount(1);
+    emonpi.pulse = EmonLibDB_getPulseCount(3);
         
     if (EEProm.rf_on) {
       PayloadTX tmp = emonpi;
@@ -383,7 +405,8 @@ void loop()
       for (byte ch=0; ch<NUM_I_CHANNELS; ch++) {
         Serial.print(F(",\"E")); Serial.print(ch+1); Serial.print("\":"); Serial.print(emonpi.E[ch]);
       }
-      
+
+      // Pulse counting
       Serial.print(F(",\"pulse\":")); Serial.print(emonpi.pulse);
       Serial.println(F("}"));
       delay(60);
@@ -405,6 +428,7 @@ void loop()
         Serial.print(F(",E")); Serial.print(ch+1); Serial.print(":"); Serial.print(emonpi.E[ch]);
       }
       
+      // Pulse counting
       Serial.print(F(",pulse:")); Serial.print(emonpi.pulse);
       
       if (!EEProm.showCurrents) {
