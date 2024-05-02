@@ -1,5 +1,5 @@
 /*
-Configuration functions for EmonTxV4.ino
+Configuration functions for emonTx5_DB_6CT_1phase.ino
 */
 
 #define Serial Serial3
@@ -352,7 +352,7 @@ void handle_conf(char *input, byte len) {
 
     case 'v': // print firmware version
       if (len==1) {
-        Serial.print(F("EmonTxV4 V")); Serial.write(firmware_version);
+        Serial.print(F("emonTx5_DB_6CT_1phase V")); Serial.write(firmware_version);
       }
       break;
     
