@@ -194,10 +194,10 @@ void setup()
     Pulse counting on any channel is only available if the appropriate solder link is made on the hardware,
       and the related "TMP" link is broken.
 */      
-  EmonLibDB_setPulseEnable(true);              // Enable counting on the "Pulse" input
+  EmonLibDB_setPulseEnable(false);             // Enable counting on the "Pulse" input
   EmonLibDB_setPulseMinPeriod(20);             // Contact bounce must not last longer than 20 ms
-  // EmonLibDB_setPulseEnable(Dig, true);         // Enable counting on the "Pulse" input
-  // EmonLibDB_setPulseMinPeriod(Dig, 20);        // Contact bounce must not last longer than 20 ms
+  // EmonLibDB_setPulseEnable(Dig, true);      // Enable counting on the "Pulse" input
+  // EmonLibDB_setPulseMinPeriod(Dig, 20);     // Contact bounce must not last longer than 20 ms
 
   EmonLibDB_datalogPeriod(DATALOG);            // Report every 9.8 s (approx)
   Serial.print("Starting ");

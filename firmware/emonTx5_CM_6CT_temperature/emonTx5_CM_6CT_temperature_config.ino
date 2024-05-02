@@ -206,8 +206,8 @@ void handle_conf(char *input, byte len) {
        *  [x] = a floating point number for the datalogging period in s
        */
       k2 = atof(input+1);
-      //EmonLibCM_datalog_period(k2); 
-      //EEProm.period = k2;
+      EmonLibCM_datalog_period(k2); 
+      EEProm.period = k2;
       Serial.print(F("datalog period: ")); Serial.print(k2);Serial.println(F(" s"));
       break;
     case 'e':
