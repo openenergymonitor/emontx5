@@ -187,8 +187,8 @@ void handle_conf(char *input, byte len) {
        *  [x] = a floating point number for the datalogging period in s
        */
       k2 = atof(input+1);
-      //EmonLibDB_datalogPeriod(k2); 
-      //EEProm.period = k2;
+      EmonLibDB_datalogPeriod(k2); 
+      EEProm.period = k2;
       Serial.print(F("datalog period: ")); Serial.print(k2);Serial.println(F(" s"));
       break;
     case 'e':
@@ -293,21 +293,36 @@ void handle_conf(char *input, byte len) {
       }
 
       switch (k1) {
-        case 0 : EmonLibDB_setPulseEnable(false);
+        case 0 : EmonLibDB_setPulseEnable(PULSE_PIN, false);
           EEProm.pulse_enable = false;
           break;
         
-        case 1 : EmonLibDB_setPulseMinPeriod(k2);
-          EmonLibDB_setPulseMinPeriod(true);
+        case 1 : EmonLibDB_setPulseEnable(PULSE_PIN, true);
           EEProm.pulse_enable = true;
-          EEProm.pulse_period = k2;
           break;
       }
-      Serial.print(F("Pulses: "));
-      if (k1)
-        {Serial.print(k2);Serial.println(F(" ms"));}
-      else
-        Serial.println(F("off"));        
+
+
+      EmonLibDB_setPulseMinPeriod(PULSE_PIN, k2);
+      EEProm.pulse_period = k2;
+      
+      if (PULSE_PIN==1) {
+        Serial.print(F("Pulse: ")); 
+      } else if (PULSE_PIN==2) {
+        Serial.print(F("Pulse on digital: ")); 
+      } else if (PULSE_PIN==3) {
+        Serial.print(F("Pulse on analog: ")); 
+      }
+    
+      if (EEProm.pulse_enable) {
+        Serial.print(F("enabled"));
+    
+        Serial.print(F(", min period: "));
+        Serial.print(EEProm.pulse_period);
+        Serial.println(F("ms"));
+      } else {
+        Serial.println(F("disabled"));
+      }  
       break;
       
     case 'i':  
