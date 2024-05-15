@@ -8,7 +8,7 @@ The emonTx5 builds directly on recent emonTx4 and emonPi2 development and replac
 
 Like the emonTx4 and emonPi2, the emonTx5 uses the same focus on higher accuracy, more CT channels, precision voltage sensing and the new microcontroller core. When combined with the emonVS voltage sensor, a selection of CT sensors and an emonPi2 or emonBase base station, it provides an end-to-end electricity monitoring solution perfect for monitoring home consumption, solar generation, EV charging, heat pumps, battery storage among other applications.
 
-!\[emonTx5_complete_kit.jpg](img/emonTx5_complete_kit.jpg)
+!\[emonTx5.jpeg](img/emonTx5.jpeg)
 
 ## Key features
 
