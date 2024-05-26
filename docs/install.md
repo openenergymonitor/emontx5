@@ -12,7 +12,7 @@ This configuration is well-suited for applications that have multiple monitoring
 
 The emonTx5 and the emonPi2 both require their own emonVs (combined voltage sensor and power supply units, light-grey units right of the blue emonTx5 and emonPi2). Data is transmiteed from the emonTx5 (left) to the emonPi2 (right) via 433 Mhz radio (which has a practical range similar to WiFi, a repeater can be used if required).
 
-![emonTx5_emonPi2_different_locations.jpg](img/emonTx5_emonPi2_different_locations.jpg)
+![emonTx5_emonPi2_different_locations.jpg](img/emonTx5_emonPi2_different_locations.png)
 
 ## 2. EmonTx5 and emonPi2 in the same location with shared emonVs
 
@@ -20,7 +20,7 @@ While an emonPi2 with a Pi Zero 2W can be extended from 6 CT's to 12 CT's with a
 
 Additional CT channels can be added in the same location in this case using an emonTx5 with either 6CT's or 12CT options. The emonVs used by the emonPi2 can be shared with the emonTx5 using a RJ45 duplicator. E.g https://www.ebay.co.uk/itm/202336672669
 
-![emontx5_emonpi2_shared.jpg](img/emontx5_emonpi2_shared.jpg)
+![emontx5_emonpi2_shared.jpg](img/emonTx5_emonPi2_shared.png)
 
 ## 3. emonTx5 and an emonBase base-station
 
@@ -28,4 +28,4 @@ Another common configuration is to use the emonTx5 with a seperate emonBase base
 
 Data is transmiteed from the emonTx5 (left) to the emonBase (right) via 433 Mhz radio (which has a practical range similar to WiFi, a repeater can be used if required).
 
-![emonTx5_emonBase.jpg](img/emonTx5_emonBase.jpg)
+![emonTx5_emonBase.jpg](img/emonTx5_emonBase.png)
