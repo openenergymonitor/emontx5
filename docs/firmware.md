@@ -82,7 +82,7 @@ The easiest way of updating the emonTx5 firmware is to connect it to an emonBase
 
 Refresh the update page after connecting the USB cable. You should now see port `ttyUSB0` appear in the 'Select port` list.
 
-![emonsd_firmware_upload.png](img/emonsd_firmware_upload2.png)
+![emonsd_firmware_update.png](img/emonsd_firmware_update.png)
 
 Double check the serial port, this is likely to be 'ttyUSB0' when plugged in via USB device connected. Select 'emonTx5' from hardware.
 
