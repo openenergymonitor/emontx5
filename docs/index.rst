@@ -5,5 +5,7 @@ emonTx5 User Guide
    :maxdepth: 2
    
    overview.md
-   firmware.md
    install.md
+   firmware.md
+   hardware.md
+
