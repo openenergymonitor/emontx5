@@ -54,7 +54,7 @@ Select the right firmware from the list that matches the requirements of your ap
 
   - The default maximum number of temperature sensors that can be connected is 3 but this can be increased up to 6 by changing the `#define MAX_TEMPS 3` value at the top of the firmware when compiling and uploading from source.
 
-- **Pulse sensing** is configured on the standard emonTx5 digital input port available on the RJ45 socket as well as the terminal block input (if the solder pad is configured). 
+- **Pulse sensing** is available on the 3 pin analog input terminal as default for all 6 CT firmwares but is disabled by default on the 12 CT firmwares as the analog input is used for CT 12. If temperature sensing is not required it is possible to configure pulse sensing on the terminal blocks connections typically used for temperature sensing.
 
 - **Analog input:** Reading from the analog input can be enabled for all firmware variants via a `#define` compile option when compiling from source.
 
