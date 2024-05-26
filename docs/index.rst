@@ -6,3 +6,4 @@ emonTx5 User Guide
    
    overview.md
    firmware.md
+   install.md
