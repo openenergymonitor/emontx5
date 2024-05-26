@@ -47,10 +47,10 @@ Select the right firmware from the list that matches the requirements of your ap
   - CT6: phase 3
   - continued for 12 CT expansion board...
 
-- **Current only:** Supported by firmware 5 & 8 only, can be used with installations without an emonVs voltage sensor. These firmwares uses the older emonLibCM electricity monitoring library that has a fallback option to an assumed RMS voltage value if no AC voltage signal is detected.
+- **Current only:** Supported by firmware 5 only, can be used with installations without an emonVs voltage sensor. These firmwares uses the older emonLibCM electricity monitoring library that has a fallback option to an assumed RMS voltage value if no AC voltage signal is detected.
 
 - **Temperature sensing:** 
-  - Supported by firmware 5 & 8 only. Temperature sensing support is achieved with a very slight degradation in electricity monitoring performance, see forum thread about this [here](https://community.openenergymonitor.org/t/emontx4-ds18b20-temperature-sensing-firmware-release-1-5-7/23496/3).
+  - Supported by firmware 5 only. Temperature sensing support is achieved with a very slight degradation in electricity monitoring performance, see forum thread about this [here](https://community.openenergymonitor.org/t/emontx4-ds18b20-temperature-sensing-firmware-release-1-5-7/23496/3).
 
   - \*\*The default maximum number of temperature sensors that can be connected is 3 but this can be increased up to 6 by changing the `#define MAX_TEMPS 3` value at the top of the firmware when compiling and uploading from source.
 
@@ -61,9 +61,9 @@ Select the right firmware from the list that matches the requirements of your ap
 **Base firmwares**<br>
 These are now built from a set of base firmware's common to all AVR-DB hardware variants (emonTx4, emonTx5 and emonPi2) available in the [avrdb_firmware repository](https://github.com/openenergymonitor/avrdb_firmware/)
 
-- Firmwares 1, 2, 6 & 7 compiled from the `emon_DB_6CT` base firmware.
+- Firmwares 1 & 2 compiled from the `emon_DB_6CT` base firmware.
 - Firmwares 3 & 4 are compiled from the `emon_DB_12CT` base firmware.
-- Firmwares 5 & 8 are compiled from the `emon_CM_6CT_temperature` base firmware.
+- Firmware 5 is compiled from the `emon_CM_6CT_temperature` base firmware.
 
 ---
 
