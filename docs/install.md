@@ -1,5 +1,7 @@
 # Install
 
+## Configurations
+
 The emonTx5 can be used to expand an emonPi monitoring system where more CT inputs are required either in the same location or in a different part of the building.
 
 It can also be used together with an emonBase base-station, where it is useful to have the electricity monitoring at one location and an Ethernet connected base-station in another.
@@ -18,7 +20,7 @@ The emonTx5 and the emonPi2 both require their own emonVs (combined voltage sens
 
 While an emonPi2 with a Pi Zero 2W can be extended from 6 CT's to 12 CT's with an expansion board that fits inside the emonPi2 unit itself. There are applications where it is useful to have a full RaspberryPi 4B with USB ports and ethernet in the main emonPi2, this limits the number of CT's on the emonPi2 to 6 CT channels.
 
-Additional CT channels can be added in the same location in this case using an emonTx5 with either 6CT's or 12CT options. The emonVs used by the emonPi2 can be shared with the emonTx5 using a RJ45 duplicator. E.g https://www.ebay.co.uk/itm/202336672669
+Additional CT channels can be added in the same location in this case using an emonTx5 with either 6CT's or 12CT options. The emonVs used by the emonPi2 can be shared with the emonTx5 using a RJ45 duplicator (available in the shop soon).
 
 ![emontx5_emonpi2_shared.jpg](img/emonTx5_emonPi2_shared.png)
 
