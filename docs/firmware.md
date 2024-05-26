@@ -25,7 +25,7 @@ Select the right firmware from the list that matches the requirements of your ap
 | 2 | emonTx5_DB_6CT_3phase_LPL | 3-ph | 6 | 0 | 1* |
 | 3 | emonTx5_DB_12CT_1phase_LPL | 1-ph | 12 | 0 | 3* |
 | 4 | emonTx5_DB_12CT_3phase_LPL | 3-ph | 12 | 0 | 3* |
-| 5 | emonTx5_CM_6CT_temperature_LPL | 1-ph or: current only | 6 | 3 (6 optional) | 1 |
+| 5 | emonTx5_CM_6CT_temperature_LPL | 1-ph or current only | 6 | 3 (6\*\*) | 1 |
 
 *The pulse sensor * denote standard firmware radio packet support for the number of pulse sensors given. Firmware modification can extend the number of pulse sensors to 3 on all emonLibDB based firmwares.*
 
@@ -52,7 +52,7 @@ Select the right firmware from the list that matches the requirements of your ap
 - **Temperature sensing:** 
   - Supported by firmware 5 & 8 only. Temperature sensing support is achieved with a very slight degradation in electricity monitoring performance, see forum thread about this [here](https://community.openenergymonitor.org/t/emontx4-ds18b20-temperature-sensing-firmware-release-1-5-7/23496/3).
 
-  - The default maximum number of temperature sensors that can be connected is 3 but this can be increased up to 6 by changing the `#define MAX_TEMPS 3` value at the top of the firmware when compiling and uploading from source.
+  - \*\*The default maximum number of temperature sensors that can be connected is 3 but this can be increased up to 6 by changing the `#define MAX_TEMPS 3` value at the top of the firmware when compiling and uploading from source.
 
 - **Pulse sensing** is available on the 3 pin analog input terminal as default for all 6 CT firmwares but is disabled by default on the 12 CT firmwares as the analog input is used for CT 12. If temperature sensing is not required it is possible to configure pulse sensing on the terminal blocks connections typically used for temperature sensing.
 
