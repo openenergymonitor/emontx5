@@ -18,7 +18,7 @@ There are currently 5 pre-compiled firmware options for the emonTx5 available vi
 
 Select the right firmware from the list that matches the requirements of your application:
 
-| ID | Firmware | Voltage | CT's Channels | Temperature Sensors | Pulse|
+| ID | Firmware | Voltage | CTs | Temperature | Pulse|
 | --- | --- | --- | --- | --- | --- |
 |   | **Radio: LowPowerLabs** |   |   |   |   |
 | 1 | emonTx5_DB_6CT_1phase_LPL | 1-ph | 6 | 0 | 1* |
