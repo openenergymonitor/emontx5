@@ -22,7 +22,7 @@ The emonPi2 with a Pi Zero 2W inside can be extended from 6 CTs to 12 CTs with a
 
 When it is desirable to have a full Raspberry Pi 4B with USB ports and Ethernet in the emonPi2, this limits the number of CTs on the emonPi2 to 6, reducing the possible total CT channels to 18.
 
-The emonVs can be shared between the emonPi2 and the emonTx5 using a RJ45 duplicator (available in the shop soon).
+The emonVs can be shared between the emonPi2 and the emonTx5 using a RJ45 duplicator (available in the shop [here](https://shop.openenergymonitor.com/emonvs-rj45-duplicator/)).
 
 
 ![emontx5_emonpi2_shared.jpg](img/emonTx5_emonPi2_shared.png)
