@@ -43,7 +43,7 @@ When running the latest emonTx5 single phase or three phase firmware, pulse coun
 The OpenEnergyMonitor pulse counter can connected like this:
 
 
-![emonPi2_pulse_input_analog.jpg](img/emonPi2_pulse_input_analog.jpg)
+![emonTx5_pulse_input_analog.jpg](img/emonTx5_pulse_input_analog.jpg)
 
 This pulse input will appear alongside the energy monitoring data from the emonTx5 on the emoncms inputs page. For pulse counting applications without the emonVs voltage sensor connected make sure to be running the single phase *emonTx5_CM_6CT_temperature* firmware. 
 
