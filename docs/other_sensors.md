@@ -129,7 +129,7 @@ The pre-compiled firmware can be loaded by connecting the emonTxV5 to an emonBas
 
 `/opt/openenergymonitor/EmonScripts/update/atmega_firmware_upload.sh ttyUSB0 emonTx5_CM_6CT_temperature_digital_LPL`
 
-Alternatively you can make the following changes to the LPL firmware to enable the digital input: 
+Alternatively you can make the following changes to the emonTx5_CM_6CT firmware to enable the digital input: 
 
 Change `#define PULSE_PIN 3` to `#define PULSE_PIN 1`
 Uncomment `#define ENABLE_DIGITAL_ON_ANALOG`
