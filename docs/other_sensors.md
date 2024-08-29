@@ -118,3 +118,32 @@ The following set of screenshots gives an example of configuring this analog inp
 ![dt_heat_processors.png](img/dt_heat_processors.png)
 
 ![sika_feeds.png](img/sika_feeds.png)
+
+### Digital input
+
+It's possible to use the pulse ADC input as a digital input (3.3V max). This can be used to interface with any 3.3V digital signal. This is useful to interface with an optical isolator for 240V presence detection which is useful for heat pump DHW diverter, zone valve or thermstat signal detection. 
+
+To enable the digital input either use the [pre-compiled firmware](https://github.com/openenergymonitor/avrdb_firmware/tree/master/compiled/emonTx5) `emonTx5_CM_6CT_temperature_digital_LPL_v1_6_3.ino.hex`
+
+The pre-compiled firmware can be loaded by connecting the emonTxV5 to an emonBase or emonPi and using the web interface or via commandline using:
+
+`/opt/openenergymonitor/EmonScripts/update/atmega_firmware_upload.sh ttyUSB0 emonTx5_CM_6CT_temperature_digital_LPL`
+
+Alternatively you can make the following changes to the LPL firmware to enable the digital input: 
+
+Change `#define PULSE_PIN 3` to `#define PULSE_PIN 1`
+Uncomment `#define ENABLE_DIGITAL_ON_ANALOG`
+Uncomment `#define INVERT_DIGITAL`
+
+Use the following node decoder if receiving the data via RF:
+
+```
+[[emon_DB_6CT_1phase_digital]]
+    nodename = emon_DB_6CT_1phase_digital
+    nodeids = 27
+    [[[rx]]]
+        names = MSG, V1, P1, P2, P3, P4, P5, P6, E1, E2, E3, E4, E5, E6, digital
+        datacodes = L, h, h,h,h,h,h,h, l,l,l,l,l,l,h
+        scales = 1,0.01,1,1,1,1,1,1,1,1,1,1,1
+        units = n,V,W,W,W,W,W,W,Wh,Wh,Wh,Wh,Wh,Wh,d
+```
