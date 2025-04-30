@@ -14,7 +14,11 @@ This arrangement is well-suited for applications that have multiple monitoring p
 
 The emonTx5 and the emonPi2 both require their own emonVs (combined voltage sensor and power supply units, light-grey units to the right of the blue emonTx5 and emonPi2). Data is transmiteed from the emonTx5 (left) to the emonPi2 (right) via 433 MHz radio (which has a practical range similar to WiFi, a 433 MHz repeater can be used if required, [available here](https://shop.openenergymonitor.com/rf-range-extender-433mhz-repeater/)).
 
-![emonTx5_emonPi2_different_locations2.jpg](img/emonTx5_emonPi2_different_locations2.png)
+### Installation Video 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XAJV5zDJF_4?si=5aG4XxaeXYWK0_xQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+![emonPi2_complete_kit.jpg](img/emonPi2_complete_kit.jpg)
 
 ## 2. EmonTx5 and emonPi2 in the same location with shared emonVs
 
