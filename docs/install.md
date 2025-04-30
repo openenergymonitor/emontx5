@@ -18,7 +18,6 @@ The emonTx5 and the emonPi2 both require their own emonVs (combined voltage sens
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XAJV5zDJF_4?si=5aG4XxaeXYWK0_xQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-![emonPi2_complete_kit.jpg](img/emonPi2_complete_kit.jpg)
 
 ## 2. EmonTx5 and emonPi2 in the same location with shared emonVs
 
