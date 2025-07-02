@@ -12,7 +12,7 @@ The following gives examples of common system arrangements.
 
 This arrangement is well-suited for applications that have multiple monitoring points separated by some distance within a building. The emonPi2 might be located at the main consumer unit, while the emonTx5 could be positioned at another consumer unit in the garage.
 
-The emonTx5 and the emonPi2 both require their own emonVs (combined voltage sensor and power supply units, light-grey units to the right of the blue emonTx5 and emonPi2). Data is transmiteed from the emonTx5 (left) to the emonPi2 (right) via 433 MHz radio (which has a practical range similar to WiFi, a 433 MHz repeater can be used if required, [available here](https://shop.openenergymonitor.com/rf-range-extender-433mhz-repeater/)).
+The emonTx5 and the emonPi2 both require their own emonVs (combined voltage sensor and power supply units, light-grey units to the right of the blue emonTx5 and emonPi2). Data is transmitted from the emonTx5 (left) to the emonPi2 (right) via 433 MHz radio (which has a practical range similar to WiFi, a 433 MHz repeater can be used if required, [available here](https://shop.openenergymonitor.com/rf-range-extender-433mhz-repeater/)).
 
 ### Installation Video 
 
